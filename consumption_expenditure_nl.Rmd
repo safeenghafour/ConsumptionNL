@@ -14,33 +14,24 @@ theme: readable
 ```{r, echo=FALSE, message=FALSE}
 # Install packages if necessary
 
-installed.packages <- rownames(installed.packages())
-
-if(("tidyverse" %in% installed.packages) == FALSE) {
-  install.packages("tidyverse")
-}
-
-if(("kableExtra" %in% installed.packages) == FALSE) {
-  install.packages("kableExtra")
-}
-
-if(("TSstudio" %in% installed.packages) == FALSE) {
-  install.packages("TSstudio")
-}
-
-if(("fpp2" %in% installed.packages) == FALSE) {
-  install.packages("fpp2")
-}
-
-if(("tseries" %in% installed.packages) == FALSE) {
-  install.packages("tseries")
-}
-
-# includes ggplot2, dplyr
+#tidyverse
+if (!require(tidyverse)) install.packages('tidyverse')
 library(tidyverse)
+
+#kableExtra
+if (!require(kableExtra)) install.packages('kableExtra')
 library(kableExtra)
+
+#fpp2
+if (!require(fpp2)) install.packages('fpp2')
 library(fpp2)
+
+#TSstudio
+if (!require(TSstudio)) install.packages('TSstudio')
 library(TSstudio)
+
+#tseries
+if (!require(tseries)) install.packages('tseries')
 library(tseries)
 
 ```
